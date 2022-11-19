@@ -20,7 +20,7 @@
 - [x] **Star Wars Episode VI:** Return of the Jedi (set four years after A New Hope)
 - [x] **Lego Star Wars:** The Freemaker Adventures (2016 to 2017)
 - [x] **Lego Star Wars:** Droid Tales (2015)
-- [] **Ewoks** (1985 to 1986)
+- [ ] **Ewoks** (1985 to 1986)
 - [x] **The Mandalorian** (set around nine years after A New Hope)
 - [x] **The Book of Boba Fett** (2021)
 - [x] **Star Wars: Resistance** animated series (set 34 years after A New Hope onwards)
