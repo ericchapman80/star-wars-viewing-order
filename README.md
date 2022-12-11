@@ -7,10 +7,12 @@
 - [x] **The Clone Wars** animated movie (represents the start of the animated series)
 - [x] **The Clone Wars Series** (begins 22 years before A New Hope, ends 19 years before)
 - [x] **Star Wars Episode III:** Revenge of the Sith (set 19 years before A New Hope)
+- [ ] **Tales of the Jedi** (2022) The timeline mixes from prior to Phantom Menace up to the Bad Batch but this was the best fit.
 - [x] **Star Wars:** The Bad Batch (2021 to Present)
 - [x] **Obi-Wan Kenobi** (2022)
 - [x] **Solo:** A Star Wars Story (set about a decade before A New Hope)
 - [x] **Star Wars:** Rebels animated series (set 5 years before A New Hope)
+- [ ] **Andor** (2022)
 - [x] **Rogue One:** A Star Wars Story (ends moments before A New Hope)
 - [x] **Star Wars:** Droids (1985 to 1986)
 - [x] **Star Wars Episode IV:** A New Hope
