@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Star_Wars_Celebration_V_-_final_look_at_the_AT-AT_lobby_%284944263892%29.jpg/1280px-Star_Wars_Celebration_V_-_final_look_at_the_AT-AT_lobby_%284944263892%29.jpg" alt="Star Wars Celebration AT-AT display" width="100%" />
+  <img src="assets/images/hero-banner.svg" alt="Star Wars Viewing Order banner" width="100%" />
   <h1>Star Wars Viewing Order</h1>
   <p><strong>A family-friendly Star Wars viewing tracker with canon, release-order, and expanded chronological guides in one README.</strong></p>
   <p>Built for watching Star Wars with my kids, tracking progress together, and using each update as a small Git commit lesson.</p>
@@ -14,11 +14,13 @@
       <img alt="Sponsor ericchapman80" src="https://img.shields.io/badge/Sponsor-ericchapman80-EA4AAA?style=for-the-badge&amp;logo=githubsponsors&amp;logoColor=white" />
     </a>
   </p>
-  <p>
-    <img alt="Family tracker progress" src="https://img.shields.io/badge/Family%20Tracker-24%2F36%20watched-2F6B3B?style=flat-square" />
-    <img alt="Canon tracker progress" src="https://img.shields.io/badge/Canon%20Tracker-16%2F26%20watched-8C6A00?style=flat-square" />
-    <img alt="Skywalker Saga progress" src="https://img.shields.io/badge/Skywalker%20Saga-6%2F9%20watched-0F4C81?style=flat-square" />
-  </p>
+  <!-- stats-badges:start -->
+<p>
+  <img alt="Family tracker progress" src="https://img.shields.io/badge/Family%20Tracker-24%2F36%20watched-8C6A00?style=flat-square" />
+  <img alt="Canon tracker progress" src="https://img.shields.io/badge/Canon%20Tracker-16%2F26%20watched-8C6A00?style=flat-square" />
+  <img alt="Skywalker Saga progress" src="https://img.shields.io/badge/Skywalker%20Saga-6%2F9%20watched-0F4C81?style=flat-square" />
+</p>
+<!-- stats-badges:end -->
 </div>
 
 ## Table of Contents
@@ -27,6 +29,8 @@
 - [Our Family Progress Tracker](#our-family-progress-tracker)
 - [Progress Snapshot](#progress-snapshot)
 - [How We Use It](#how-we-use-it)
+- [Fork and Sync](#fork-and-sync)
+- [Dynamic Stats and Automation](#dynamic-stats-and-automation)
 - [Canon-Only Recommended Order](#canon-only-recommended-order)
 - [Release Order Reference](#release-order-reference)
 - [Expanded Chronological Guide](#expanded-chronological-guide)
@@ -48,6 +52,7 @@ This is the checklist we actually update as we watch. The reference sections bel
 
 ### Current Watch Path
 
+<!-- family-tracker:start -->
 - [ ] **The Acolyte**
 - [x] **Star Wars Episode I: The Phantom Menace**
 - [x] **Star Wars Episode II: Attack of the Clones**
@@ -84,15 +89,18 @@ This is the checklist we actually update as we watch. The reference sections bel
 - [ ] **Star Wars Episode VIII: The Last Jedi**
 - [ ] **Star Wars Episode IX: The Rise of Skywalker**
 - [ ] **Star Wars: Forces of Destiny**
+<!-- family-tracker:end -->
 
 ## Progress Snapshot
 
+<!-- progress-table:start -->
 | Collection | Watched | Total | Progress |
 | --- | ---: | ---: | ---: |
 | Family tracker | 24 | 36 | 67% |
 | Canon core tracker | 16 | 26 | 62% |
 | Skywalker Saga films | 6 | 9 | 67% |
 | Lego, legacy, and bonus extras | 8 | 10 | 80% |
+<!-- progress-table:end -->
 
 ## How We Use It
 
@@ -107,8 +115,113 @@ git add README.md
 git commit -m "Mark Andor as watched"
 ```
 
+The progress badges and snapshot table above can be updated automatically by running:
+
+```bash
+python3 scripts/update_readme_stats.py
+```
+
+## Fork and Sync
+
+If you want to track your own family progress and still pick up new titles or ordering fixes from this project, the right workflow is to **fork first, then clone your fork**.
+
+### 1. Fork the repo on GitHub
+
+Create your own copy of:
+
+- `https://github.com/ericchapman80/star-wars-viewing-order`
+
+### 2. Clone your fork
+
+Replace `YOUR_USERNAME` with your GitHub username:
+
+```bash
+git clone git@github.com:YOUR_USERNAME/star-wars-viewing-order.git
+cd star-wars-viewing-order
+```
+
+### 3. Add the original repo as `upstream`
+
+```bash
+git remote add upstream git@github.com:ericchapman80/star-wars-viewing-order.git
+git remote -v
+```
+
+### 4. Track your watch progress in your fork
+
+Update the family checklist in `README.md`, then commit your progress:
+
+```bash
+python3 scripts/update_readme_stats.py
+git add README.md
+git commit -m "Mark Ahsoka as watched"
+git push origin main
+```
+
+### 5. Pull in future upstream updates
+
+When this repo gets new entries, order fixes, or README improvements, sync your fork like this:
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
+
+This keeps your personal tracker while still letting you inherit updates from the source repo.
+
+## Dynamic Stats and Automation
+
+This repo includes a small automation layer so the progress badges and snapshot table stay aligned with the checklist.
+
+### How the dynamic stats work
+
+- The family checklist in [README.md](/Users/chapman/projects/star-wars-viewing-order/README.md) is the source of truth.
+- [update_readme_stats.py](/Users/chapman/projects/star-wars-viewing-order/scripts/update_readme_stats.py) reads the checklist entries between the `family-tracker` markers.
+- The script recalculates:
+- `Family tracker`
+- `Canon core tracker`
+- `Skywalker Saga films`
+- `Lego, legacy, and bonus extras`
+- It then rewrites the badge block and the `Progress Snapshot` table in the README.
+
+### Run it locally
+
+After changing any checklist item from `[ ]` to `[x]`, run:
+
+```bash
+python3 scripts/update_readme_stats.py
+```
+
+Then commit the updated `README.md`.
+
+### GitHub Action
+
+This repo also includes a GitHub Action at [update-readme-stats.yml](/Users/chapman/projects/star-wars-viewing-order/.github/workflows/update-readme-stats.yml).
+
+It runs when one of these files changes:
+
+- [README.md](/Users/chapman/projects/star-wars-viewing-order/README.md)
+- [update_readme_stats.py](/Users/chapman/projects/star-wars-viewing-order/scripts/update_readme_stats.py)
+- [update-readme-stats.yml](/Users/chapman/projects/star-wars-viewing-order/.github/workflows/update-readme-stats.yml)
+
+The workflow:
+
+- checks out the repository
+- sets up Python
+- runs the stats update script
+- commits `README.md` if the generated values changed
+- pushes the update back to the current branch
+
+### Editing guidance
+
+- Update the checklist items inside the `Our Family Progress Tracker` section.
+- Do not manually edit the badge block or the `Progress Snapshot` numbers unless you also plan to update the script behavior.
+- Keep checklist titles consistent, because the stats script groups entries by exact title text.
+
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Star_Wars_Celebration_-_Imperial_Stormtroopers_%2814747156457%29.jpg/1280px-Star_Wars_Celebration_-_Imperial_Stormtroopers_%2814747156457%29.jpg" alt="Star Wars Celebration stormtroopers" width="100%" />
+  <img src="assets/images/section-banner.svg" alt="Star Wars tracker section banner" width="100%" />
 </div>
 
 ## Canon-Only Recommended Order
@@ -248,12 +361,11 @@ If this tracker saved you time or made a family rewatch easier, you can support 
 
 ## Image Credits and Sources
 
-Hero image:
+The README now uses local SVG banners stored in the repo so they render reliably on GitHub.
+
+Wikimedia sources that are still useful for reference and inspiration:
 
 - [Star Wars Celebration V - final look at the AT-AT lobby](https://commons.wikimedia.org/wiki/File:Star_Wars_Celebration_V_-_final_look_at_the_AT-AT_lobby_%284944263892%29.jpg) by Brent D. Payne via Wikimedia Commons
-
-Secondary image:
-
 - [Star Wars Celebration - Imperial Stormtroopers](https://commons.wikimedia.org/wiki/File:Star_Wars_Celebration_-_Imperial_Stormtroopers_%2814747156457%29.jpg) by Michael Elleray via Wikimedia Commons
 
 Primary reference source:

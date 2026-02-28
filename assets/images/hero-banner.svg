@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">Star Wars Viewing Order Banner</title>
+  <desc id="desc">A starfield banner with gold title text and blue and red light bars.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="55%" stop-color="#101726"/>
+      <stop offset="100%" stop-color="#040508"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff0a8"/>
+      <stop offset="40%" stop-color="#ffd95a"/>
+      <stop offset="100%" stop-color="#c99616"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="520" fill="url(#bg)"/>
+  <g fill="#ffffff" opacity="0.9">
+    <circle cx="88" cy="72" r="1.4"/>
+    <circle cx="210" cy="110" r="1.1"/>
+    <circle cx="318" cy="58" r="1.8"/>
+    <circle cx="420" cy="138" r="1.2"/>
+    <circle cx="566" cy="96" r="1.5"/>
+    <circle cx="712" cy="72" r="1.1"/>
+    <circle cx="846" cy="122" r="1.7"/>
+    <circle cx="982" cy="66" r="1.2"/>
+    <circle cx="1104" cy="102" r="1.9"/>
+    <circle cx="1246" cy="82" r="1.3"/>
+    <circle cx="1364" cy="126" r="1.6"/>
+    <circle cx="1496" cy="58" r="1.2"/>
+    <circle cx="122" cy="214" r="1.1"/>
+    <circle cx="252" cy="186" r="1.5"/>
+    <circle cx="374" cy="246" r="1.2"/>
+    <circle cx="512" cy="196" r="1.6"/>
+    <circle cx="664" cy="236" r="1.2"/>
+    <circle cx="794" cy="202" r="1.4"/>
+    <circle cx="910" cy="248" r="1.2"/>
+    <circle cx="1062" cy="210" r="1.7"/>
+    <circle cx="1198" cy="234" r="1.1"/>
+    <circle cx="1332" cy="194" r="1.5"/>
+    <circle cx="1466" cy="244" r="1.2"/>
+    <circle cx="96" cy="362" r="1.4"/>
+    <circle cx="224" cy="410" r="1.1"/>
+    <circle cx="366" cy="352" r="1.7"/>
+    <circle cx="500" cy="430" r="1.2"/>
+    <circle cx="646" cy="382" r="1.8"/>
+    <circle cx="786" cy="426" r="1.1"/>
+    <circle cx="918" cy="366" r="1.5"/>
+    <circle cx="1052" cy="420" r="1.2"/>
+    <circle cx="1184" cy="360" r="1.6"/>
+    <circle cx="1318" cy="404" r="1.1"/>
+    <circle cx="1456" cy="356" r="1.4"/>
+  </g>
+  <rect x="118" y="118" width="10" height="284" rx="5" fill="#3ab7ff" filter="url(#glow)"/>
+  <rect x="1472" y="118" width="10" height="284" rx="5" fill="#ff5757" filter="url(#glow)"/>
+  <text x="800" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" letter-spacing="4" fill="url(#gold)">STAR WARS</text>
+  <text x="800" y="294" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" letter-spacing="7" fill="#f3f4f6">VIEWING ORDER</text>
+  <text x="800" y="348" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="18" letter-spacing="3" fill="#c4d0df">Family tracker for canon, release order, and chronological watch-throughs</text>
+</svg>
