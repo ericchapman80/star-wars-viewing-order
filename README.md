@@ -16,8 +16,8 @@
   </p>
   <!-- stats-badges:start -->
 <p>
-  <img alt="Family tracker progress" src="https://img.shields.io/badge/Family%20Tracker-24%2F36%20watched-8C6A00?style=flat-square" />
-  <img alt="Canon tracker progress" src="https://img.shields.io/badge/Canon%20Tracker-16%2F26%20watched-8C6A00?style=flat-square" />
+  <img alt="Family tracker progress" src="https://img.shields.io/badge/Family%20Tracker-24%2F40%20watched-8C6A00?style=flat-square" />
+  <img alt="Canon tracker progress" src="https://img.shields.io/badge/Canon%20Tracker-16%2F29%20watched-8C6A00?style=flat-square" />
   <img alt="Skywalker Saga progress" src="https://img.shields.io/badge/Skywalker%20Saga-6%2F9%20watched-0F4C81?style=flat-square" />
 </p>
 <!-- stats-badges:end -->
@@ -34,6 +34,7 @@
 - [Canon-Only Recommended Order](#canon-only-recommended-order)
 - [Release Order Reference](#release-order-reference)
 - [Expanded Chronological Guide](#expanded-chronological-guide)
+- [Announced and Upcoming Projects](#announced-and-upcoming-projects)
 - [Accuracy Notes](#accuracy-notes)
 - [Support This Project](#support-this-project)
 - [Image Credits and Sources](#image-credits-and-sources)
@@ -64,6 +65,7 @@ This is the checklist we actually update as we watch. The reference sections bel
 - [x] **Star Wars Episode III: Revenge of the Sith**
 - [ ] **Tales of the Empire**
 - [ ] **Tales of the Underworld**
+- [ ] **Star Wars: Maul - Shadow Lord**
 - [x] **Star Wars: The Bad Batch**
 - [x] **Solo: A Star Wars Story**
 - [x] **Obi-Wan Kenobi**
@@ -88,7 +90,10 @@ This is the checklist we actually update as we watch. The reference sections bel
 - [ ] **Star Wars Episode VII: The Force Awakens**
 - [ ] **Star Wars Episode VIII: The Last Jedi**
 - [ ] **Star Wars Episode IX: The Rise of Skywalker**
+- [ ] **The Mandalorian and Grogu**
+- [ ] **Star Wars: Starfighter**
 - [ ] **Star Wars: Forces of Destiny**
+- [ ] **Star Wars: Visions Presents - The Ninth Jedi**
 <!-- family-tracker:end -->
 
 ## Progress Snapshot
@@ -96,10 +101,10 @@ This is the checklist we actually update as we watch. The reference sections bel
 <!-- progress-table:start -->
 | Collection | Watched | Total | Progress |
 | --- | ---: | ---: | ---: |
-| Family tracker | 24 | 36 | 67% |
-| Canon core tracker | 16 | 26 | 62% |
+| Family tracker | 24 | 40 | 60% |
+| Canon core tracker | 16 | 29 | 55% |
 | Skywalker Saga films | 6 | 9 | 67% |
-| Lego, legacy, and bonus extras | 8 | 10 | 80% |
+| Lego, legacy, and bonus extras | 8 | 11 | 73% |
 <!-- progress-table:end -->
 
 ## How We Use It
@@ -179,11 +184,7 @@ This repo includes a small automation layer so the progress badges and snapshot 
 
 - The family checklist in [README.md](/Users/chapman/projects/star-wars-viewing-order/README.md) is the source of truth.
 - [update_readme_stats.py](/Users/chapman/projects/star-wars-viewing-order/scripts/update_readme_stats.py) reads the checklist entries between the `family-tracker` markers.
-- The script recalculates:
-- `Family tracker`
-- `Canon core tracker`
-- `Skywalker Saga films`
-- `Lego, legacy, and bonus extras`
+- The script recalculates `Family tracker`, `Canon core tracker`, `Skywalker Saga films`, and `Lego, legacy, and bonus extras`.
 - It then rewrites the badge block and the `Progress Snapshot` table in the README.
 
 ### Run it locally
@@ -238,23 +239,26 @@ This is the cleaned-up **canon-only Star Wars viewing order** based on the offic
 | 6 | Star Wars Episode III: Revenge of the Sith | |
 | 7 | Tales of the Empire | Spans multiple eras; placement here is approximate |
 | 8 | Tales of the Underworld | Spans multiple eras; placement here is approximate |
-| 9 | Star Wars: The Bad Batch | |
-| 10 | Solo: A Star Wars Story | |
-| 11 | Obi-Wan Kenobi | |
-| 12 | Andor | Runs close to Rebels in the broader timeline |
-| 13 | Star Wars: Rebels | Runs close to Andor in the broader timeline |
-| 14 | Rogue One: A Star Wars Story | Direct lead-in to Episode IV |
-| 15 | Star Wars Episode IV: A New Hope | |
-| 16 | Star Wars Episode V: The Empire Strikes Back | |
-| 17 | Star Wars Episode VI: Return of the Jedi | |
-| 18 | The Mandalorian | |
-| 19 | The Book of Boba Fett | Best watched after early Mandalorian seasons |
-| 20 | Ahsoka | |
-| 21 | Skeleton Crew | New Republic era |
-| 22 | Star Wars: Resistance | Starts before Episode VII and continues into that period |
-| 23 | Star Wars Episode VII: The Force Awakens | |
-| 24 | Star Wars Episode VIII: The Last Jedi | |
-| 25 | Star Wars Episode IX: The Rise of Skywalker | |
+| 9 | Star Wars: Maul - Shadow Lord | Officially set after The Clone Wars in the early Empire era |
+| 10 | Star Wars: The Bad Batch | |
+| 11 | Solo: A Star Wars Story | |
+| 12 | Obi-Wan Kenobi | |
+| 13 | Andor | Runs close to Rebels in the broader timeline |
+| 14 | Star Wars: Rebels | Runs close to Andor in the broader timeline |
+| 15 | Rogue One: A Star Wars Story | Direct lead-in to Episode IV |
+| 16 | Star Wars Episode IV: A New Hope | |
+| 17 | Star Wars Episode V: The Empire Strikes Back | |
+| 18 | Star Wars Episode VI: Return of the Jedi | |
+| 19 | The Mandalorian | |
+| 20 | The Book of Boba Fett | Best watched after early Mandalorian seasons |
+| 21 | Ahsoka | |
+| 22 | Skeleton Crew | New Republic era |
+| 23 | The Mandalorian and Grogu | Upcoming theatrical story tied to the New Republic era |
+| 24 | Star Wars: Resistance | Starts before Episode VII and continues into that period |
+| 25 | Star Wars Episode VII: The Force Awakens | |
+| 26 | Star Wars Episode VIII: The Last Jedi | |
+| 27 | Star Wars Episode IX: The Rise of Skywalker | |
+| 28 | Star Wars: Starfighter | Officially set about five years after Episode IX |
 
 Optional canon side content not included in the core order above:
 
@@ -292,6 +296,9 @@ This section is for the classic **release-order Star Wars watch experience**.
 | 24 | 2024 | Tales of the Empire | Series |
 | 25 | 2024 | Skeleton Crew | Series |
 | 26 | 2025 | Tales of the Underworld | Series |
+| 27 | 2026 | Star Wars: Maul - Shadow Lord | Series |
+| 28 | 2026 | The Mandalorian and Grogu | Film |
+| 29 | 2027 | Star Wars: Starfighter | Film |
 
 ## Expanded Chronological Guide
 
@@ -309,23 +316,26 @@ This is the broader **collector-style chronological Star Wars viewing order**. I
 | 6 | Star Wars Episode III: Revenge of the Sith | Canon |
 | 7 | Tales of the Empire | Canon anthology |
 | 8 | Tales of the Underworld | Canon anthology |
-| 9 | Star Wars: The Bad Batch | Canon |
-| 10 | Solo: A Star Wars Story | Canon |
-| 11 | Obi-Wan Kenobi | Canon |
-| 12 | Andor | Canon |
-| 13 | Star Wars: Rebels | Canon |
-| 14 | Rogue One: A Star Wars Story | Canon |
-| 15 | Star Wars Episode IV: A New Hope | Canon |
-| 16 | Star Wars Episode V: The Empire Strikes Back | Canon |
-| 17 | Star Wars Episode VI: Return of the Jedi | Canon |
-| 18 | The Mandalorian | Canon |
-| 19 | The Book of Boba Fett | Canon |
-| 20 | Ahsoka | Canon |
-| 21 | Skeleton Crew | Canon |
-| 22 | Star Wars: Resistance | Canon |
-| 23 | Star Wars Episode VII: The Force Awakens | Canon |
-| 24 | Star Wars Episode VIII: The Last Jedi | Canon |
-| 25 | Star Wars Episode IX: The Rise of Skywalker | Canon |
+| 9 | Star Wars: Maul - Shadow Lord | Canon |
+| 10 | Star Wars: The Bad Batch | Canon |
+| 11 | Solo: A Star Wars Story | Canon |
+| 12 | Obi-Wan Kenobi | Canon |
+| 13 | Andor | Canon |
+| 14 | Star Wars: Rebels | Canon |
+| 15 | Rogue One: A Star Wars Story | Canon |
+| 16 | Star Wars Episode IV: A New Hope | Canon |
+| 17 | Star Wars Episode V: The Empire Strikes Back | Canon |
+| 18 | Star Wars Episode VI: Return of the Jedi | Canon |
+| 19 | The Mandalorian | Canon |
+| 20 | The Book of Boba Fett | Canon |
+| 21 | Ahsoka | Canon |
+| 22 | Skeleton Crew | Canon |
+| 23 | The Mandalorian and Grogu | Canon |
+| 24 | Star Wars: Resistance | Canon |
+| 25 | Star Wars Episode VII: The Force Awakens | Canon |
+| 26 | Star Wars Episode VIII: The Last Jedi | Canon |
+| 27 | Star Wars Episode IX: The Rise of Skywalker | Canon |
+| 28 | Star Wars: Starfighter | Canon |
 
 ### Suggested Bonus Placements
 
@@ -343,12 +353,27 @@ These are not official canon chronology placements. They are included because th
 | After Episode VI | Ewoks | Legacy | Practical legacy placement rather than strict canon timing |
 | Before Episode VII | Lego Star Wars: The Resistance Rises | Lego | Useful lead-in to the sequel era |
 | Around the sequel era | Star Wars: Forces of Destiny | Bonus anthology | Spans several eras, so placement is flexible |
+| Around the sequel-to-post-sequel transition | Star Wars: Visions Presents - The Ninth Jedi | Bonus anthology | Part of the Visions line, treated as a separate continuity |
+
+## Announced and Upcoming Projects
+
+These are included so the tracker stays current and forward-looking. Dates below are the latest official windows currently published on StarWars.com.
+
+| Project | Category | Status as of March 8, 2026 | Release timing |
+| --- | --- | --- | --- |
+| Star Wars: Maul - Shadow Lord | Canon series | Announced, with dated premiere | April 6, 2026 |
+| The Mandalorian and Grogu | Canon film | Announced, with dated theatrical release | May 22, 2026 |
+| Star Wars: Starfighter | Canon film | Announced, in production; theatrical date announced | Memorial Day 2027 |
+| Star Wars: Visions Presents - The Ninth Jedi | Visions spin-off | Announced, release year announced | 2026 |
 
 ## Accuracy Notes
 
 - The canon chronology in this README was checked against the official StarWars.com guide published on May 4, 2025.
+- Upcoming additions were checked against official StarWars.com announcements current as of March 8, 2026.
 - `The Rise of Skywalker` belongs in **2019** for release order.
 - `The Bad Batch` released before `The Book of Boba Fett` in 2021, so it appears first in release order here.
+- `Star Wars: Maul - Shadow Lord` is placed in the early Empire era because official copy states it is set after `The Clone Wars`.
+- `The Mandalorian and Grogu` and `Star Wars: Starfighter` are included as future canon films; `Starfighter` is listed after Episode IX based on official wording that it is set about five years later.
 - `Tales of the Jedi`, `Tales of the Empire`, `Tales of the Underworld`, and `Forces of Destiny` all span multiple time periods, so any single linear placement is a practical approximation.
 - `Star Wars: Resistance` starts before `The Force Awakens` and continues through that era, so it is listed near the sequel transition rather than treated as a perfectly self-contained prequel.
 - Lego and legacy entries are intentionally labeled as suggested bonus placements rather than official chronology.
@@ -371,6 +396,11 @@ Wikimedia sources that are still useful for reference and inspiration:
 Primary reference source:
 
 - [Star Wars: the best order to watch every movie and series in the franchise](https://www.starwars.com/news/star-wars-movies-and-series-guide)
+- [In Star Wars: Maul - Shadow Lord, the Former Sith Returns](https://www.starwars.com/news/star-wars-maul-shadow-lord)
+- [Star Wars: Maul – Shadow Lord Teaser Trailer and First Poster Arrive](https://www.starwars.com/news/star-wars-maul-shadow-lord-first-trailer-poster-art)
+- [The Mandalorian and Grogu Debuts a Big Game Spot](https://www.starwars.com/news/the-mandalorian-and-grogu-big-game-spot)
+- [Director Shawn Levy's Star Wars: Starfighter Film Starts Production This Fall](https://www.starwars.com/news/star-wars-starfighter)
+- [Volume 3 Release Date and New Star Wars: Visions Spin-off Series](https://www.starwars.com/news/visions-presents-the-ninth-jedi)
 
 Other good free sources for README art:
 

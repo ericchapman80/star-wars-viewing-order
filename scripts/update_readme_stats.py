@@ -27,6 +27,7 @@ CANON_TITLES = {
     "Star Wars Episode III: Revenge of the Sith",
     "Tales of the Empire",
     "Tales of the Underworld",
+    "Star Wars: Maul - Shadow Lord",
     "Star Wars: The Bad Batch",
     "Solo: A Star Wars Story",
     "Obi-Wan Kenobi",
@@ -40,10 +41,12 @@ CANON_TITLES = {
     "The Book of Boba Fett",
     "Ahsoka",
     "Skeleton Crew",
+    "The Mandalorian and Grogu",
     "Star Wars: Resistance",
     "Star Wars Episode VII: The Force Awakens",
     "Star Wars Episode VIII: The Last Jedi",
     "Star Wars Episode IX: The Rise of Skywalker",
+    "Star Wars: Starfighter",
 }
 
 SKYWALKER_TITLES = {
@@ -69,6 +72,7 @@ EXTRA_TITLES = {
     "Ewoks",
     "Lego Star Wars: The Resistance Rises",
     "Star Wars: Forces of Destiny",
+    "Star Wars: Visions Presents - The Ninth Jedi",
 }
 
 
